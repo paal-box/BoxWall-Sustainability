@@ -5,34 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BoxWall Sustainability</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="BoxWall Logo">
+    <img src="logo.png" alt="BoxWall Logo" class="logo">
     <nav>
-      <a href="#calculator">Sustainability Calculator</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#features">Features</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section id="hero">
-      <h1>Welcome to BoxWall Sustainability</h1>
-      <p>Join us in building a sustainable future with innovative modular walls.</p>
-      <button onclick="scrollToCalculator()">Calculate Your Impact</button>
+      <h1>BoxWall Sustainability</h1>
+      <p>Build a sustainable future with reusable modular walls.</p>
+      <button onclick="scrollToSection('calculator')">Calculate Your Impact</button>
     </section>
 
     <section id="calculator">
       <h2>Sustainability Calculator</h2>
-      <label for="modules">Enter Number of Modules:</label>
-      <input type="number" id="modules" placeholder="e.g., 5">
-      <button onclick="calculateSavings()">Calculate</button>
-      <p id="result"></p>
+      
+      <!-- Modules Slider and Input -->
+      <div class="input-group">
+        <label for="modules">Number of Modules:</label>
+        <input type="range" id="modules" min="1" max="500" value="50" oninput="syncSliderInput('modules', 'modules-input', 30)">
+        <input type="number" id="modules-input" value="50" min="1" max="500" oninput="syncInputSlider('modules-input', 'modules', 30)">
+      </div>
+      
+      <!-- Area Slider and Input -->
+      <div class="input-group">
+        <label for="area">Area per Module (m²):</label>
+        <input type="range" id="area" min="1" max="5" step="0.1" value="2.5" oninput="syncSliderInput('area', 'area-input', 30)">
+        <input type="number" id="area-input" value="2.5" min="1" max="5" step="0.1" oninput="syncInputSlider('area-input', 'area', 30)">
+      </div>
+      
+      <!-- CO2 Savings Display -->
+      <p id="result">You saved <span id="co2-saved">3750</span> kg of CO₂!</p>
+      <canvas id="co2-chart"></canvas>
+    </section>
+
+    <section id="features">
+      <h2>Why Choose BoxWall?</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <img src="feature1.png" alt="Reusable Design">
+          <h3>Reusable Design</h3>
+          <p>Reduce waste with walls that adapt to your needs.</p>
+        </div>
+        <div class="card">
+          <img src="feature2.png" alt="CO₂ Savings">
+          <h3>CO₂ Savings</h3>
+          <p>Save up to 30kg CO₂ per square meter.</p>
+        </div>
+        <div class="card">
+          <img src="feature3.png" alt="Modern Aesthetics">
+          <h3>Modern Aesthetics</h3>
+          <p>Enhance your space with sleek, sustainable designs.</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Contact us at: <a href="mailto:contact@boxwall.com">contact@boxwall.com</a></p>
+    <p>Contact us: <a href="mailto:contact@boxwall.com">contact@boxwall.com</a></p>
   </footer>
 
   <script src="scripts.js"></script>
