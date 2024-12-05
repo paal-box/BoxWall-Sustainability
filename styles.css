@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -5,21 +6,88 @@ body {
   background-color: #e3e3e3;
   color: #333333;
 }
+
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #A1C40F;
-  padding: 1rem;
-  text-align: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
+
+header .logo {
+  height: 40px;
+}
+
 nav a {
   margin: 0 1rem;
   color: white;
   text-decoration: none;
 }
+
 #hero {
+  background-color: #A1C40F;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 70px;
+}
+
+#calculator {
   text-align: center;
   padding: 2rem;
 }
-#calculator {
-  margin: 2rem auto;
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.input-group label {
+  font-size: 1rem;
+}
+
+.input-group input[type="range"] {
+  flex: 2;
+}
+
+.input-group input[type="number"] {
+  flex: 1;
   text-align: center;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#features {
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333333;
+  color: white;
 }
