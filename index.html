@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoxWall Sustainability</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="BoxWall Logo">
+    <nav>
+      <a href="#calculator">Sustainability Calculator</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Welcome to BoxWall Sustainability</h1>
+      <p>Join us in building a sustainable future with innovative modular walls.</p>
+      <button onclick="scrollToCalculator()">Calculate Your Impact</button>
+    </section>
+
+    <section id="calculator">
+      <h2>Sustainability Calculator</h2>
+      <label for="modules">Enter Number of Modules:</label>
+      <input type="number" id="modules" placeholder="e.g., 5">
+      <button onclick="calculateSavings()">Calculate</button>
+      <p id="result"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact us at: <a href="mailto:contact@boxwall.com">contact@boxwall.com</a></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
