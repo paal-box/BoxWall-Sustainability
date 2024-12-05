@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #e3e3e3;
   color: #333333;
+  box-sizing: border-box;
 }
 
 header {
@@ -12,34 +13,45 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #A1C40F;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
 }
 
+header .logo-container {
+  flex: 1;
+}
+
 header .logo {
-  height: 40px;
+  height: 35px;
+}
+
+nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
 nav a {
-  margin: 0 1rem;
   color: white;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
 #hero {
   background-color: #A1C40F;
   color: white;
   text-align: center;
-  padding: 4rem 2rem;
-  margin-top: 70px;
+  padding: 3rem 1rem;
+  margin-top: 60px;
 }
 
 #calculator {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .input-group {
@@ -47,11 +59,11 @@ nav a {
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .input-group label {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .input-group input[type="range"] {
@@ -68,13 +80,13 @@ nav a {
 
 #features {
   background-color: #f9f9f9;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .feature-cards {
   display: flex;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .card {
@@ -83,6 +95,12 @@ nav a {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  flex: 1;
+}
+
+.card img {
+  max-width: 80%;
+  height: auto;
 }
 
 footer {
@@ -90,4 +108,5 @@ footer {
   padding: 1rem;
   background-color: #333333;
   color: white;
+  font-size: 0.8rem;
 }
