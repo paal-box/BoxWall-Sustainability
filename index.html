@@ -9,7 +9,9 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="BoxWall Logo" class="logo">
+    <div class="logo-container">
+      <img src="logo.png" alt="BoxWall Logo" class="logo">
+    </div>
     <nav>
       <a href="#calculator">Calculator</a>
       <a href="#features">Features</a>
@@ -29,14 +31,14 @@
       
       <!-- Modules Slider and Input -->
       <div class="input-group">
-        <label for="modules">Number of Modules:</label>
+        <label for="modules">Modules:</label>
         <input type="range" id="modules" min="1" max="500" value="50" oninput="syncSliderInput('modules', 'modules-input', 30)">
         <input type="number" id="modules-input" value="50" min="1" max="500" oninput="syncInputSlider('modules-input', 'modules', 30)">
       </div>
       
       <!-- Area Slider and Input -->
       <div class="input-group">
-        <label for="area">Area per Module (m²):</label>
+        <label for="area">Area (m²):</label>
         <input type="range" id="area" min="1" max="5" step="0.1" value="2.5" oninput="syncSliderInput('area', 'area-input', 30)">
         <input type="number" id="area-input" value="2.5" min="1" max="5" step="0.1" oninput="syncInputSlider('area-input', 'area', 30)">
       </div>
